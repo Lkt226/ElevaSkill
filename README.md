@@ -7,9 +7,9 @@
  
  ### Ignora o design 1983 full brabo, vou remodelar isso dps, mas durante o hackathon tinha muito pouco tempo.
  
-![image](https://user-images.githubusercontent.com/83098581/138691263-5e5f929d-227a-4b4c-9a9a-d15bbaa5a248.png)
-![image](https://user-images.githubusercontent.com/83098581/138691364-5237a802-3d6e-4c97-aced-7023b32e0d45.png)
-![image](https://user-images.githubusercontent.com/83098581/138691499-0f09ce90-6f4c-4297-807b-b91aad743fb3.png)
+![2021-10-25 11 46 37 www figma com 18903140d4c3](https://user-images.githubusercontent.com/83098581/138724399-309010a2-e6af-451f-9266-610f1207a093.png)
+![2021-10-25 11 47 11 www figma com 52a286495d8e](https://user-images.githubusercontent.com/83098581/138724407-454b7df9-b22f-4c30-8308-24c29a5722c4.png)
+![2021-10-25 11 47 33 www figma com ff04f6a18ad5](https://user-images.githubusercontent.com/83098581/138724374-7e8a0874-e220-4c2a-99b6-20597edb5493.png)
 
 # GITHUB
 Estou passando esse projeto para o codigo, utilizando **NuxtJS** e upado na Vercel.
