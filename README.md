@@ -16,7 +16,6 @@ Estou passando esse projeto para o codigo, utilizando **NuxtJS** e upado na Verc
 * **VUEJS**
 * **NUXT**
 * **FIREBASE**
-* **TAILWIND**
 
 # EVENTO
 A idéia é formada de 3 pontos do vista, o do Usuario comum, o da empresa e o do Professor, para o usuario a idéia é formar um ambiente onde eles podem se qualificar, se colocar no mercado e subir nas suas carreiras em um mesmo lugar, isso vai funcionar da seguinte forma:
