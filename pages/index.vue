@@ -1,17 +1,29 @@
 <template>
   <div class="body">
-    <Perfil img=""/>
+    <Perfil img="" actived="4"/>
 
-    <h3>Meu perfil</h3>
+    <h3 style="padding-left: 0.5rem;" >Meu perfil</h3>
     <Divider type="l" pad="1"/>
 
     <LineList type="notification" text="Visitaram seu perfil" :api="notification"/>
     <LineList type="courses" text="Cursos em andamento" :api="courses"/>
+    
     <br>
-    <h3>Calendario</h3>
-    <Divider type="l" pad="1"/>
-    <Calendar :api="calendar"/>
 
+    <LineCalendar :api="calendar"/>
+
+    <br>
+    
+    <h3 style="padding-left: 0.5rem;" >Empresas na área</h3>
+    <Divider type="l" pad="1"/>
+    <Map/>
+
+    <br>
+    
+    <LineJobs :api="jobs"/>
+
+    <br>
+    <br>
   </div>
 </template>
 
@@ -23,7 +35,8 @@ export default {
     return{
       notification: api.notification,
       courses: api.courses,
-      calendar: api.calendar
+      calendar: api.calendar,
+      jobs: api.jobs
     }
   }
 }
@@ -42,7 +55,7 @@ export default {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    list-style-type: none;
   }
   html,
   body,

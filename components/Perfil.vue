@@ -1,14 +1,23 @@
 <template>
   <header class="header">
-      <img class="profile-image" src="../static/image.jpg" alt="foto do usuario" />
+      <img class="profile-image" :src="profileImg" alt="foto do usuario" />
       <menu>
         <ul class="menu-list">
-          <li><img src="../static/History.svg" alt="" /></li>
-          <li><img src="../static/Curriculum.svg" alt="" /></li>
-          <li><img src="../static/avatar.svg" alt="" /></li>
-          <li>
-            <img class="menu-item-actived" src="../static/Eyes.svg" alt="" />
-          </li>
+          <NuxtLink to="/">
+            <img :class="actived1" src="../static/History.svg" alt="Historico de atividades" />
+          </NuxtLink>
+
+          <NuxtLink to="/curriculum">
+            <img :class="actived2" src="../static/Curriculum.svg" alt="curriculo" />
+          </NuxtLink>
+
+          <NuxtLink to="/">
+            <img :class="actived3" src="../static/avatar.svg" alt="avatar" />
+          </NuxtLink>
+          
+          <NuxtLink to="/">
+            <img :class="actived4" src="../static/Eyes.svg" alt="home" />
+          </NuxtLink>
         </ul>
       </menu>
     </header>
@@ -16,7 +25,16 @@
 
 <script>
 export default {
-
+  props: ['img', 'actived'],
+  data() {
+    return {
+      profileImg : require('../static/image.jpg'),
+      actived1: this.actived === '1' ? 'actived' : '',
+      actived2: this.actived === '2' ? 'actived' : '',
+      actived3: this.actived === '3' ? 'actived' : '',
+      actived4: this.actived === '4' ? 'actived' : '',
+    }
+  }
 }
 </script>
 <style scoped>
@@ -28,7 +46,7 @@ export default {
     .menu-list * > * {
         padding: 1rem;
     }
-    .menu-item-actived {
+    .actived {
         background-color: var(--color-blue);
     }
 

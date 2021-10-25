@@ -1,6 +1,6 @@
 <template>
     <div class="line-text">
-        <h3 class="text c-gray">
+        <h3 class="text">
         {{this.text}}
 
         <label :for="type" class="openbyID">

@@ -1,11 +1,13 @@
 <template>
     <div>
-        <h3 class="text" style="padding-left: 0.5rem;">Calendario
-            <label for="calendar" class="openbyID">
+        <h3 class="text" style="padding-left: 0.5rem;">
+            Vagas
+            <label for="line-jobs" class="openbyID">
             <input
                 type="checkbox"
-                id="calendar"
-                name="calendar"
+                id="line-jobs"
+                name="line-jobs"
+                checked
                 class="invisible openbyID"
             />
                 <img @click="clickIsOpen" class="open-button" src="../static/open.svg" alt="open"/>
@@ -13,11 +15,15 @@
             <img class="enter-button" src="../static/open.svg" alt="open"/>
         </h3>
             <Divider type="l" pad="1"/>
+
         <ul v-if="isOpen === true" class="line-text">
             <li v-for="(item, index) in api" :key="index">
-                <h3 class="c-gray">{{item.date}}</h3>
+                <span class="text-job">
+                    <h3 class="c-gray">{{item.name}}</h3>
+                    <h4 class="c-gray">{{item.createDate}}</h4>
+                </span>
                 <Divider/>
-                <h4 style="padding: 0 1rem;">{{item.event}}</h4>
+                <h4>{{`${item.company} | ${item.seniority}`}}</h4>
             </li>
         </ul>
     </div>
@@ -28,7 +34,7 @@ export default {
     props:['text', 'api'],
     data() {
         return {
-            isOpen: false,
+            isOpen: true,
         }
     },
     methods: {
@@ -47,6 +53,12 @@ export default {
     .text{
         display: flex;
         justify-content: space-between;
+    }
+    
+    .text-job{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 
     .item{
