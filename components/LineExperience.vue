@@ -1,7 +1,7 @@
 <template>
     <div class="line-text">
         <h3 class="text">
-        {{this.text}}
+        {{this.title}}
 
         <label :for="type" class="openbyID">
             <input
@@ -9,14 +9,32 @@
                 :id="type"
                 :name="type"
                 class="invisible openbyID"
+                checked
             />
             <img @click="clickIsOpen" class="open-button" src="../static/open.svg" alt="open"/>
         </label>
         </h3>
         <ul v-if="isOpen === true">
-            <li class="text item" v-for="(item, index) in api" :key="index">
-                <h4 class="text c-gray">{{`${item.name}${item[extra] ? " - "+item[extra] : ""}`}}</h4>
-                <img class="enter-button" src="../static/open.svg" alt="open"/>
+            <li class="item" v-for="(item, index) in api" :key="index">
+                <span class="text">
+                    <h4 class="c-gray">{{`${item.name}${item[extra] ? " - "+item[extra] : ""}`}}</h4>
+                    <h4 class="c-red"> - </h4>
+                </span>
+                <Divider/>
+                <h4 class="c-gray">{{item.title}} | {{item.start_date}} - {{item.end_date}} </h4>
+                <Divider/>
+                <h4 class="c-gray">{{item.description}}</h4>
+                <Divider/>
+            </li>
+            <li class="item">
+                <span class="text">
+                    <h4 class="c-gray"> Adicionar experiência ...</h4>
+                    <h4 class="c-green"> + </h4>
+                </span>
+                <Divider/>
+                <h4 class="c-gray">Cargo | inicio - fim </h4>
+                <Divider/>
+                <h4 class="c-gray">O que você fazia na empresa?</h4>
             </li>
         </ul>
         <Divider/>
@@ -25,10 +43,10 @@
 
 <script>
 export default {
-    props:['text', 'api', 'type', 'extra'],
+    props:['title', 'api', 'type'],
     data() {
         return {
-            isOpen: false,
+            isOpen: true,
         }
     },
     methods: {

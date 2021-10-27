@@ -5,7 +5,7 @@
     <h3 style="padding-left: 0.5rem;" >Meu perfil</h3>
     <Divider type="l" pad="1"/>
 
-    <LineList type="notification" text="Visitaram seu perfil" :api="notification"/>
+    <LineList type="notification" text="Visitaram seu perfil" :api="notification" extra="date"/>
     <LineList type="courses" text="Cursos em andamento" :api="courses"/>
     
     <br>
@@ -29,7 +29,6 @@
 
 <script>
 import { api } from '../backend/API.js'
-console.log(api)
 export default {
   data(){
     return{
@@ -49,6 +48,7 @@ export default {
     --color-white: #ffffff;
     --color-blue: #84c4f2;
     --color-green: #a3c992;
+    --color-red: #f29c9c;
   }
 
   * {
@@ -59,8 +59,10 @@ export default {
   }
   html,
   body,
+  #__nuxt,
   .body {
     width: 100vw;
+    overflow-x: hidden;
   }
 
   h3{
@@ -69,5 +71,11 @@ export default {
 
   .c-gray{
     color: var(--color-gray);
+  }
+  .c-red{
+    color: var(--color-red);
+  }
+  .c-green{
+    color: var(--color-green);
   }
 </style>

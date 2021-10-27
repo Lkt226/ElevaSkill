@@ -1,26 +1,26 @@
 <template>
   <header class="header">
-      <img class="profile-image" :src="profileImg" alt="foto do usuario" />
-      <menu>
-        <ul class="menu-list">
-          <NuxtLink to="/">
-            <img :class="actived1" src="../static/History.svg" alt="Historico de atividades" />
-          </NuxtLink>
+    <img class="profile-image" :src="profileImg" alt="foto do usuario" />
+    <menu>
+      <ul class="menu-list">
+        <NuxtLink to="/historic">
+          <img :class="actived1" src="../static/History.svg" alt="Historico de atividades" />
+        </NuxtLink>
 
-          <NuxtLink to="/curriculum">
-            <img :class="actived2" src="../static/Curriculum.svg" alt="curriculo" />
-          </NuxtLink>
+        <NuxtLink to="/curriculum">
+          <img :class="actived2" src="../static/Curriculum.svg" alt="curriculo" />
+        </NuxtLink>
 
-          <NuxtLink to="/">
-            <img :class="actived3" src="../static/avatar.svg" alt="avatar" />
-          </NuxtLink>
-          
-          <NuxtLink to="/">
-            <img :class="actived4" src="../static/Eyes.svg" alt="home" />
-          </NuxtLink>
-        </ul>
-      </menu>
-    </header>
+        <NuxtLink to="/avatar">
+          <img :class="actived3" src="../static/avatar.svg" alt="avatar" />
+        </NuxtLink>
+        
+        <NuxtLink to="/">
+          <img :class="actived4" src="../static/Eyes.svg" alt="home" />
+        </NuxtLink>
+      </ul>
+    </menu>
+  </header>
 </template>
 
 <script>

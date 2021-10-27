@@ -9,6 +9,7 @@
                 :id="type"
                 :name="type"
                 class="invisible openbyID"
+                checked
             />
             <img @click="clickIsOpen" class="open-button" src="../static/open.svg" alt="open"/>
         </label>
@@ -16,7 +17,11 @@
         <ul v-if="isOpen === true">
             <li class="text item" v-for="(item, index) in api" :key="index">
                 <h4 class="text c-gray">{{`${item.name}${item[extra] ? " - "+item[extra] : ""}`}}</h4>
-                <img class="enter-button" src="../static/open.svg" alt="open"/>
+                <h4 class="c-red"> - </h4>
+            </li>
+            <li class="text item">
+                <h4 class="text c-gray"> Adicionar skill ...</h4>
+                <h4 class="c-green"> + </h4>
             </li>
         </ul>
         <Divider/>
@@ -28,7 +33,7 @@ export default {
     props:['text', 'api', 'type', 'extra'],
     data() {
         return {
-            isOpen: false,
+            isOpen: true,
         }
     },
     methods: {

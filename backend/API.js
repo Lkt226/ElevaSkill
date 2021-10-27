@@ -1,8 +1,73 @@
 export const api = {
     name: "Margarete de Souza",
     email: "margaretesouza15@gmail.com",
+    curriculum: {
+        name: "Margarete de Souza",
+        birth: "29/12/1989",
+        comportament_test: [
+            {name: "DISC", score: "Aguia"},
+            {name: "MBTI", score: "ISTP"},
+        ],
+
+        gender: "Mulher CIS",
+        race: "Negra",
+        civil_status: "Casada",
+
+        nickname: '',
+        email: "margaretesouza15@gmail.com",
+        phone: "+55 (21) 99999-9999",
+        social_media: [
+            {name: "Linkedin", user: "@Margarete de Souza" ,path: "https://www.linkedin.com/in/margarete-de-souza-a9a8b8b4/"},
+        ],
+
+        country: "Brasil",
+        state: "Rio de Janeiro",
+        endress: "Itaipuaçu - Maricá",
+        zip_code: "24855-188",
+
+        
+        title: "Analista de Marketing Jr",
+        hard_skills: [
+            { name: "Marketing", test: "9", description: "", }
+        ],
+        soft_skills: [
+            { name: "Comunicação", test: "8", description: "", }
+        ],
+
+        experience: [
+            {
+                name: "Nome da Empresa",
+                title: "Analista de Marketing",
+                start_date: "01/01/2018",
+                end_date: "01/01/2018",
+                description: "Descrição da experiência"
+            }
+        ],
+        education: [
+            {
+                name: "Nome da Instituição",
+                title: "Curso",
+                start_date: "01/01/2018",
+                end_date: "01/01/2018",
+                description: "Descrição da experiência"
+            }
+        ]
+    },
+    plataform_historic: [
+        { name: "Iniciou Marketing digital para iniciantes.", date: "01/01/2018" },
+        { name: "Participou do evento X.", date: "01/01/2018" },
+        { name: "Terminou Gestão de trafego para iniciantes.", date: "01/01/2018" },
+    ],
+    parties_historic: [
+        { name: "Participou do processo seletivo na Porto do Açu para vaga em Analista de Marketing Jr.", date: "01/01/2018" },
+        { name: "Participou do processo seletivo na empresa X para uma vaga em Analista de Marketing Jr", date: "01/01/2018" },
+    ],
     notification:[
         {name: "teste", date: "10/10/2021"}
+    ],
+    about_comments:[
+        {name: "Margarete se comportou muito bem durante a entrevista.", owner: "anonim", date: "10/10/2021"},
+        {name: "Comunicativa.", owner: "anonim", date: "10/10/2021"},
     ],
     courses:[
         {name: "Curso de Oratória e comunicação"},

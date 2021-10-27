@@ -1,34 +1,35 @@
 <template>
-    <div class="line-text">
-        <h3 class="text">
-        {{this.text}}
-
-        <label :for="type" class="openbyID">
+    <div>
+        <h3 class="text" style="padding-left: 0.5rem;">
+            {{title}}
+            <label :for="type" class="openbyID">
             <input
                 type="checkbox"
                 :id="type"
                 :name="type"
                 class="invisible openbyID"
+                checked
             />
-            <img @click="clickIsOpen" class="open-button" src="../static/open.svg" alt="open"/>
-        </label>
+                <img @click="clickIsOpen" class="open-button" src="../static/open.svg" alt="open"/>
+            </label>
         </h3>
-        <ul v-if="isOpen === true">
-            <li class="text item" v-for="(item, index) in api" :key="index">
-                <h4 class="text c-gray">{{`${item.name}${item[extra] ? " - "+item[extra] : ""}`}}</h4>
-                <img class="enter-button" src="../static/open.svg" alt="open"/>
+            <Divider type="l" pad="1"/>
+        <ul v-if="isOpen === true" class="line-text">
+            <li v-for="(item, index) in api" :key="index">
+                <h3 class="c-gray">{{item.date}}</h3>
+                <Divider/>
+                <h4 style="padding: 0 1rem;">{{item.name}}</h4>
             </li>
         </ul>
-        <Divider/>
     </div>
 </template>
 
 <script>
 export default {
-    props:['text', 'api', 'type', 'extra'],
+    props:['title', 'type', 'api'],
     data() {
         return {
-            isOpen: false,
+            isOpen: true,
         }
     },
     methods: {
