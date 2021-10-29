@@ -1,5 +1,5 @@
 <template>
-  <div id="jobs">
+  <NuxtLink id="jobs" :to="path">
       <span class="span">
           <h3>
               {{ title }}
@@ -10,7 +10,7 @@
       </span>
       <Divider/>
       <h4>{{company}} | {{seniority}}</h4>
-  </div>
+  </NuxtLink>
 </template>
 
 <script>
