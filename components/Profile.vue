@@ -38,7 +38,7 @@ export default {
 
     @media (min-width: 1040px) {
         height: calc(100vh - 2rem);
-        @apply max-w-sm absolute m-4;
+        @apply max-w-sm relative m-4;
     }
 }
 .background * {

@@ -9,7 +9,7 @@
           </p>
       </span>
       <Divider/>
-      <h4>{{company}} | {{nivel}}</h4>
+      <h4>{{company}} | {{seniority}}</h4>
   </div>
 </template>
 
@@ -19,7 +19,8 @@ export default {
         title: String,
         date: String,
         company: String,
-        nivel: String
+        seniority: String,
+        path: String
     }
 }
 </script>

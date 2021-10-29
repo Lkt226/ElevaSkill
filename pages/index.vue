@@ -1,5 +1,5 @@
 <template>
-  <div id="body">
+  <div id="body" class="flex flex-col lg:flex-row">
     <Menu class=""/>
     <Profile :name="name" :title="curriculum.title" :birth="curriculum.birth" :resume="curriculum.resume"/>
     <main class="grid sm:grid-cols-2">
@@ -7,6 +7,16 @@
         <DropText id="notification" title="Visitaram o seu perfil" main>
           <Linetext v-for="item in notification" :key="item.id" class="w-full"
             :text="item.name" :extra="item.date" divider="full"/>
+        </DropText>
+
+        <DropText id="Courses" title="Cursos em andamento" main>
+          <DefaultTextItem v-for="item in courses" :key="item.id" class="w-full"
+            :text="item.name" path="/" divider="full"/>
+        </DropText>
+
+        <DropText id="Jobs" title="Vagas" main>
+          <InlineJobsItem v-for="item in jobs" :key="item.id" class="w-full"
+            :title="item.name" :company="item.company" :date="item.createDate" :seniority="item.seniority" path="/" divider="full"/>
         </DropText>
       </section>
 
@@ -22,7 +32,9 @@ export default {
     return {
       name: api.curriculum.name,
       curriculum: api.curriculum,
-      notification: api.notification
+      notification: api.notification,
+      courses: api.courses,
+      jobs: api.jobs
     }
   }
 }

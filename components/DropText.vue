@@ -14,6 +14,7 @@
         <Divider v-else size="full"/>
 
         <ul :class="`pl-2 w-full ${actived === false ? 'none' : ''}`" ><slot></slot></ul>
+        <br>
     </div>
 </template>
 

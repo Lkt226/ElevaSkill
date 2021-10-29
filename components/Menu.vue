@@ -52,9 +52,9 @@ export default {
 
 <style scoped>
     .menu {
-        @apply absolute left-0  p-0 m-0 z-50;
+        @apply fixed left-0  p-0 m-0 z-50;
         @media screen and (max-width: 640px) {
-            @apply absolute bottom-0 flex flex-col justify-end w-full h-auto z-50;
+            @apply fixed bottom-0 flex flex-col justify-end w-full h-auto z-50;
         }
     }
     .item{
