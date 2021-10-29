@@ -1,5 +1,5 @@
 <template>
-    <div class="line">
+    <div :class="notFull !== undefined ? 'fit' : 'w-full'">
       <h3>
       {{text}}{{extra !== undefined ? " - "+extra : ""}}
       </h3>
@@ -12,13 +12,14 @@ export default {
   props:[
     'text',
     'extra',
-    'divider'
+    'divider',
+    'notFull'
   ]
 }
 </script>
 
 <style scoped>
-.line{
+.fit{
   width: fit-content;
 }
 </style>

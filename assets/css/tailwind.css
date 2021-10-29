@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#body,
+#__layout,
+#__nuxt {
+  @apply overflow-x-hidden w-full;
+}

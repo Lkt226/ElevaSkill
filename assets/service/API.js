@@ -1,6 +1,4 @@
 export const api = {
-    name: "Margarete de Souza",
-    email: "margaretesouza15@gmail.com",
     curriculum: {
         name: "Margarete de Souza",
         birth: "29/12/1989",
@@ -8,6 +6,8 @@ export const api = {
             {name: "DISC", score: "Aguia"},
             {name: "MBTI", score: "ISTP"},
         ],
+
+        resume: "Margarete de Souza é uma pessoa determinada, com garra que gosta de desafios, durante sua jornada para se tornar analista de marketing, ela passou por diversas coisa, mas no fim conseguiu.",
 
         gender: "Mulher CIS",
         race: "Negra",

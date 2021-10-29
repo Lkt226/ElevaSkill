@@ -1,12 +1,12 @@
 <template>
   <div class="background">
-      <img src="../static/image.jpg" alt="foto de usuario" class="user-img">
-      <section id="personal-information">
-          <span class="inline-between">
+      <img src="../static/image.jpg" alt="foto de usuario" class="w-full">
+      <section class="w-full hidden sm:block ">
+          <span class="inline-item">
               <Linetext :text="name" divider="full"/>
               <Linetext :text="nickname || '+ Nome Social'" divider="full"/>
           </span>
-          <span class="inline-between">
+          <span class="inline-item">
               <Linetext :text="title" divider="full"/>
               <Linetext :text="birth" divider="full"/>
           </span>
@@ -25,27 +25,23 @@ export default {
 </script>
 
 <style scoped>
-.inline-between{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: flex-end;
+.inline-item{
+    @apply flex w-full justify-between items-end;
 }
-#personal-information{
-    width: 100%;
-}
+
 .background {
-  width: 50vw;
-  padding: 2rem;
-  background: black;
+    @apply bg-black p-8 w-full;
+
+    @media screen and (max-width: 1040px) {
+        @apply sm:grid sm:grid-cols-2 sm:w-full;
+    }
+
+    @media (min-width: 1040px) {
+        height: calc(100vh - 2rem);
+        @apply max-w-sm absolute m-4;
+    }
 }
 .background * {
-  color: white;
-}
-
-.user-img{
-    width: 100%;
-    height: auto;
-
+  @apply text-white;
 }
 </style>

@@ -1,6 +1,16 @@
 <template>
-    <menu>
-        <ul class="menu" v-if="open === true" @mouseleave="open=false">
+    <menu class="menu" v-if="$device.isMobile">
+        <ul class="flex" v-if="open === true">
+            <li v-for="item in items" :key="item.id" :class="`item ${item.id === actived ? 'actived': ''}`">
+                <NuxtLink :to="item.href">
+                    <img :src="item.icon" :alt="'Ir para '+item.text">
+                </NuxtLink>
+            </li>
+        </ul>
+    </menu>
+    
+    <menu class="menu" v-else>
+        <ul class="flex" v-if="open === true" @mouseleave="open=false">
             <li v-for="item in items" :key="item.id" :class="`item ${item.id === actived ? 'actived': ''}`">
                 <NuxtLink :to="item.href">
                     <img :src="item.icon" :alt="'Ir para '+item.text">
@@ -42,12 +52,16 @@ export default {
 
 <style scoped>
     .menu {
-        display: flex;
+        @apply absolute left-0  p-0 m-0 z-50;
+        @media screen and (max-width: 640px) {
+            @apply absolute bottom-0 flex flex-col justify-end w-full h-auto z-50;
+        }
     }
     .item{
-        width: 50px;
-        height: 50px;
-        background: #000;
+        @apply w-16 h-16 bg-black;
+        @media screen and (max-width: 640px) {
+            @apply w-1/4;
+        }
     }
     .item > *{
         width: 100%;

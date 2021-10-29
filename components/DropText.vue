@@ -1,12 +1,11 @@
 <template>
     <div class="drop-text">
-        <span>
+        <span class="flex justify-between w-full text-left">
             <NuxtLink :to="path" v-if="path !== ''">
                 <h3>{{title}}</h3>
             </NuxtLink>
+                <h3>{{title}}</h3>
                 
-                <Linetext v-else :text="title" divider="none"/>
-
             <img @click="actived = !actived" :class="actived === true ? 'actived' : ''" 
             src="../static/open.svg" alt="open a page">
         </span>
@@ -14,32 +13,28 @@
         <Divider v-if="!main"/>
         <Divider v-else size="full"/>
 
-        <ul :class="`list ${actived === false ? 'none' : ''}`" ><slot></slot></ul>
+        <ul :class="`pl-2 w-full ${actived === false ? 'none' : ''}`" ><slot></slot></ul>
     </div>
 </template>
 
 <script>
 export default {
     props: {
-        title: {
+        title: {  /// title of the dropdown
             type: String,
             default: 'Dropdown'
         },
-        api: {
+        path: { /// What path to go to
             type: String,
             default: ''
         },
-        path: {
-            type: String,
-            default: ''
-        },
-        main: {
+        main: { /// if it is the main dropdown -> main line have less divisor size
             type: Boolean,
             default: false
         }
     },
     data: function () {
-        return {
+        return { /// if it is actived -> show the list
             actived: true,
         }
     },
@@ -51,23 +46,12 @@ export default {
     padding-left: 0.5rem;
     width: calc(100% - 0.5rem);
 }
-.drop-text > span {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    text-align: left;
-}
-.list {
-    padding-left: 0.5rem;
-    width: 100%;
-}
-.go-to-page {
-    transform: rotate(-90deg);
-}
+
 .actived {
     transform: rotate(180deg);
+    @apply rotate-180;
 }
 .none {
-    display: none;
+    @apply hidden;
 }
 </style>
