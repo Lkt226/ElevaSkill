@@ -4,17 +4,15 @@
       <section class="w-full hidden sm:block ">
           <span class="inline-item">
               <Linetext :text="name" divider="full"/>
-              <Linetext :text="nickname || '+ Nome Social'" divider="full"/>
+              <Linetext :text="nickname || '+ Nome Social'" divider="full" class=" text-right"/>
           </span>
           <span class="inline-item">
               <Linetext :text="title" divider="full"/>
-              <Linetext :text="birth" divider="full"/>
+              <Linetext :text="birth" divider="full" class=" w-max"/>
           </span>
               <Linetext text="Resumo" divider="full"/>
               <h4>{{resume}}</h4>
-              
-
-      </section>
+     </section>
   </div>
 </template>
 
