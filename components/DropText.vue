@@ -11,7 +11,9 @@
             src="../static/open.svg" alt="open a page">
         </span>
        
-        <Divider size="full"/>
+        <Divider v-if="!main"/>
+        <Divider v-else size="full"/>
+
         <ul :class="`list ${actived === false ? 'none' : ''}`" ><slot></slot></ul>
     </div>
 </template>
@@ -30,6 +32,10 @@ export default {
         path: {
             type: String,
             default: ''
+        },
+        main: {
+            type: Boolean,
+            default: false
         }
     },
     data: function () {
@@ -43,7 +49,7 @@ export default {
 <style scoped>
 .drop-text {
     padding-left: 0.5rem;
-    width: calc(100vw - 0.5rem);
+    width: calc(100% - 0.5rem);
 }
 .drop-text > span {
     display: flex;

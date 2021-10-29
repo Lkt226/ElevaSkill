@@ -1,8 +1,5 @@
 <template>
-    <div v-if="size === 'full'" class="divider full"/>
-    <div v-else-if="size === 'none'" class="divider none"/>
-    <div v-else class="divider"/>
-
+    <div :class="`divider ${size}`"/>
 </template>
 
 <script>
@@ -10,7 +7,7 @@ export default {
     props:{
         size: {
             type: String,
-            default: 'normal'
+            default: ''
         },
     }
 }
@@ -24,6 +21,7 @@ export default {
 .full {
     width: 100%;
 }
+
 .none {
     display: none;
 }

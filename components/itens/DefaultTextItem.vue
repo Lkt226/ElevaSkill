@@ -1,8 +1,10 @@
 <template>
     <li class="item">
-        <Linetext :text="text" :extra="extra" divider="none"/>
+        <h3>{{text}}{{extra ? ` - ${extra}` : ''}}</h3>
+        <NuxtLink  v-if="path !== undefined" :to="path"> 
+            <img class="button" src="../../static/open.svg" alt="open a page">
+        </NuxtLink>
         
-        <NuxtLink  v-if="path !== undefined" :to="path"> <img class="button" src="../../static/open.svg" alt="open a page"></NuxtLink>
         <img v-else class="none" src="../../static/open.svg" alt="open a page">
         
         <Divider/>

@@ -3,6 +3,17 @@
 [X] Texto com linha
 [X] Divisor
 [X] Texto com aba (popup) comum
+[X] Texto com aba (popup) calendario
+[X] Texto com aba (popup) jobs
+[X] Texto com aba (popup) Experiência
+[X] Texto com aba (popup) data
+[X] Texto com aba (popup) skills
+[ ] Menu
+
+[ ] Versão pc
+[ ] Texto com linha
+[ ] Divisor
+[ ] Texto com aba (popup) comum
 [ ] Texto com aba (popup) calendario
 [ ] Texto com aba (popup) jobs
 [ ] Texto com aba (popup) Experiência
