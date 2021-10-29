@@ -1,6 +1,6 @@
 <template>
     <menu class="menu" v-if="$device.isMobile">
-        <ul class="flex" v-if="open === true">
+        <ul class="flex">
             <li v-for="item in items" :key="item.id" :class="`item ${item.id === actived ? 'actived': ''}`">
                 <NuxtLink :to="item.href">
                     <img :src="item.icon" :alt="'Ir para '+item.text">
@@ -41,9 +41,9 @@ export default {
             open: this.isOpen,
             items: [
                 { text: 'Home', href: '/', icon: require('../static/Eyes.svg'), id:0 },
-                { text: 'Curriculum', href: '/about', icon: require('../static/Curriculum.svg'), id:1},
-                { text: 'Avatar', href: '/contact', icon: require('../static/avatar.svg'), id:2},
-                { text: 'Historic', href: '/contact', icon: require('../static/History.svg'), id:3},
+                { text: 'Curriculum', href: '/curriculum', icon: require('../static/Curriculum.svg'), id:1},
+                { text: 'Avatar', href: '/avatar', icon: require('../static/avatar.svg'), id:2},
+                { text: 'Historic', href: '/historic', icon: require('../static/History.svg'), id:3},
             ]
         }
     }

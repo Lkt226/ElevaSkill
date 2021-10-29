@@ -66,8 +66,8 @@ export const api = {
         {name: "teste", date: "10/10/2021"}
     ],
     about_comments:[
-        {name: "Margarete se comportou muito bem durante a entrevista.", owner: "anonim", date: "10/10/2021"},
-        {name: "Comunicativa.", owner: "anonim", date: "10/10/2021"},
+        {name: "Margarete se comportou muito bem durante a entrevista.", owner: "pessoa1", date: "10/10/2021"},
+        {name: "Comunicativa.", owner: "pessoa2", date: "10/10/2021"},
     ],
     courses:[
         {name: "Curso de Oratória e comunicação"},
