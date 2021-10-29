@@ -38,10 +38,7 @@
             <DefaultTextItem v-for="item in social_media" :key="item.id"
                 :text="item.name" :extra="item.user" :path="item.path"/>
         </DropText>
-        <DropText title="Participação na plataforma" main>
-            <DefaultTextItem v-for="item in plataform_historic" :key="item.id"
-                :text="item.name" :extra="item.date" :path="item.path"/>
-        </DropText>
+    
         <DropText title="Comentarios de orientadores" main>
             <DefaultTextItem v-for="item in about_comments" :key="item.id"
                 :text="`${item.owner}: '${item.name}'`" :extra="item.date" :path="item.path"/>

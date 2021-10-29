@@ -54,13 +54,20 @@ export const api = {
         ]
     },
     plataform_historic: [
-        { name: "Iniciou Marketing digital para iniciantes.", date: "01/01/2018" },
-        { name: "Participou do evento X.", date: "01/01/2018" },
-        { name: "Terminou Gestão de trafego para iniciantes.", date: "01/01/2018" },
+        { date: "01/01/2018", itens:[
+            { name: "Iniciou Marketing digital para iniciantes.", path: "/" },
+            { name: "Participou do evento X.", path: "/" },
+            { name: "Terminou Gestão de trafego para iniciantes.", path: "/" },
+        ]}
+        
     ],
     parties_historic: [
-        { name: "Participou do processo seletivo na Porto do Açu para vaga em Analista de Marketing Jr.", date: "01/01/2018" },
-        { name: "Participou do processo seletivo na empresa X para uma vaga em Analista de Marketing Jr", date: "01/01/2018" },
+        { 
+            date: "01/01/2018", itens:[
+                { name: "Participou do processo seletivo na Porto do Açu para vaga em Analista de Marketing Jr.", path: "/" },
+                { name: "Participou do processo seletivo na empresa X para uma vaga em Analista de Marketing Jr", path: "/" },
+            ]
+        }
     ],
     notification:[
         {name: "teste", date: "10/10/2021"}
