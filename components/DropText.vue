@@ -1,9 +1,18 @@
 <template>
     <div class="drop-text">
-        <Linetext :text="title" divider="none"/>
-        <img src="../static/open.svg" alt="open a page">
+        <span>
+            <NuxtLink :to="path" v-if="path !== ''">
+                <h3>{{title}}</h3>
+            </NuxtLink>
+                
+                <Linetext v-else :text="title" divider="none"/>
+
+            <img @click="actived = !actived" :class="actived === true ? 'actived' : ''" 
+            src="../static/open.svg" alt="open a page">
+        </span>
+       
         <Divider size="full"/>
-        <ul class="list"><slot></slot></ul>
+        <ul :class="`list ${actived === false ? 'none' : ''}`" ><slot></slot></ul>
     </div>
 </template>
 
@@ -17,11 +26,15 @@ export default {
         api: {
             type: String,
             default: ''
+        },
+        path: {
+            type: String,
+            default: ''
         }
     },
     data: function () {
         return {
-            actived: false,
+            actived: true,
         }
     },
 }
@@ -29,13 +42,26 @@ export default {
 
 <style scoped>
 .drop-text {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding-left: 0.5rem;
     width: calc(100vw - 0.5rem);
+}
+.drop-text > span {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
 }
 .list {
     padding-left: 0.5rem;
     width: 100%;
+}
+.go-to-page {
+    transform: rotate(-90deg);
+}
+.actived {
+    transform: rotate(180deg);
+}
+.none {
+    display: none;
 }
 </style>

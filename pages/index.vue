@@ -1,9 +1,18 @@
 <template>
   <div id="body">
       <Linetext text="Isto é um texto de linha."/>
-      <DropText title="Sobre">
+      <DropText title="Notificações">
         <DefaultTextItem v-for="item in api" :key="item.id" 
-          :text="item.name" :extra="item.extra"/>
+          :text="item.name" :extra="item.extra" />
+      </DropText>
+
+      <DropText title="Cursos" path="/">
+        <DefaultTextItem v-for="item in api" :key="item.id" 
+          :text="item.name" :extra="item.extra" path="/"/>
+      </DropText>
+
+      <DropText title="Calendario" path="/">
+        
       </DropText>
   </div>
 </template>
