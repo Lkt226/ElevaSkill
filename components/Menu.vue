@@ -29,7 +29,7 @@ export default {
     props: {
         isOpen: {
             type: Boolean,
-            default: true
+            default: false
         },
         actived: {
             type: Number,
