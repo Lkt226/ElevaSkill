@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import { api } from '../backend/API.js'
+import { api } from '../../backend/API.js'
 export default {
   data(){
     return{
