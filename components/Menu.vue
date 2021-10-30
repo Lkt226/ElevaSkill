@@ -11,13 +11,14 @@
     
     <menu class="menu" v-else>
         <ul class="flex" v-if="open === true" @mouseleave="open=false">
-            <li v-for="item in items" :key="item.id" :class="`item ${item.id === actived ? 'actived': ''}`">
+            <li class="m-1 rounded-md" v-for="item in items" :key="item.id" 
+            :class="`item ${item.id === actived ? 'actived': ''}`">
                 <NuxtLink :to="item.href">
                     <img :src="item.icon" :alt="'Ir para '+item.text">
                 </NuxtLink>
             </li>
         </ul>
-        <div class="item actived" v-else @mouseenter="open=true">
+        <div class="item actived p-2 rounded-md m-1" v-else @mouseenter="open=true">
             <img :src="items[actived].icon" :alt="'Ir para '+items[actived].text">
         </div>
     </menu>
@@ -58,7 +59,7 @@ export default {
         }
     }
     .item{
-        @apply w-16 h-16 bg-black;
+        @apply w-16 h-16 bg-gray-700;
         @media screen and (max-width: 640px) {
             @apply w-1/4;
         }
@@ -71,7 +72,7 @@ export default {
         align-items: center;
     }
     .actived{
-        background: blue;
+        @apply bg-blue-400;
     }
 
 </style>

@@ -125,7 +125,10 @@ export const api = {
             endDate: "10/10/2021", 
         },  
     ],
-    avatar:[
-        
-    ]
+    avatar:{
+        face: [
+            {path: "https://firebasestorage.googleapis.com/v0/b/for-ambient.appspot.com/o/teste%2Fboca1.svg?alt=media&token=bfae6dda-1978-4dc5-b97f-caeb481626cb"},
+            {path: "https://firebasestorage.googleapis.com/v0/b/for-ambient.appspot.com/o/teste%2Feyes%201.svg?alt=media&token=d852c8d5-a762-475d-9b1a-772788c1eec6"},
+        ]
+    }
 }

@@ -26,14 +26,13 @@ export default {
 
 <style scoped>
     .skill {
-        display: flex;
-        width: 100%;
+        @apply flex w-full mb-1;
     }
     .green{
-        color: #00ff00;
+        @apply text-green-600;
     }
     .red{
-        color: #ff0000;
+        @apply text-red-600;
     }
     #gitem {
         width: 100%;

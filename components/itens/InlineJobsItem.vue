@@ -30,10 +30,6 @@ export default {
         width: calc(100% - 1.5rem);
     }
     .span {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-
-        width: 100%;
+        @apply flex justify-between items-end w-full;
     }
 </style>

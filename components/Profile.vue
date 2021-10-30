@@ -28,7 +28,7 @@ export default {
 }
 
 .background {
-    @apply bg-black p-8 w-full;
+    @apply bg-gray-900 p-8 w-full;
 
     @media screen and (max-width: 1040px) {
         @apply sm:grid sm:grid-cols-2 sm:w-full;

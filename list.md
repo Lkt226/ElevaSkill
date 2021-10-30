@@ -8,18 +8,18 @@
 [X] Texto com aba (popup) Experiência
 [X] Texto com aba (popup) data
 [X] Texto com aba (popup) skills
-[ ] Menu
+[X] Menu
 
-[ ] Versão pc
-[ ] Texto com linha
-[ ] Divisor
-[ ] Texto com aba (popup) comum
-[ ] Texto com aba (popup) calendario
-[ ] Texto com aba (popup) jobs
-[ ] Texto com aba (popup) Experiência
-[ ] Texto com aba (popup) data
-[ ] Texto com aba (popup) skills
-[ ] Menu
+[X] Versão pc
+[X] Texto com linha
+[X] Divisor
+[X] Texto com aba (popup) comum
+[X] Texto com aba (popup) calendario
+[X] Texto com aba (popup) jobs
+[X] Texto com aba (popup) Experiência
+[X] Texto com aba (popup) data
+[X] Texto com aba (popup) skills
+[X] Menu
 
 # To do list pages
 
@@ -41,8 +41,14 @@
 [X] Avatar
 
     [ ] Personagem
+        [ ] Cabeça
+        [ ] Rosto
+        [ ] Acessorio
     [ ] Editor
+        [ ] Tamanho da cabeça
     [ ] Medalhas
+        [ ] Ouro
+        [ ] Prata
 
 [X] Perfil
 

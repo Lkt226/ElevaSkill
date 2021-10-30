@@ -15,14 +15,13 @@ export default {
 
 <style scoped>
 .divider {
-    border-top: 1px solid #c4c4c4;
-    width: calc(100% + 1rem);
+    @apply border-t border-gray-300 border-solid;
 }
 .full {
-    width: 100%;
+    @apply w-full;
 }
 
 .none {
-    display: none;
+    @apply hidden;
 }
 </style>

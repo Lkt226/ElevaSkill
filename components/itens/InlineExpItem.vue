@@ -50,17 +50,16 @@ export default {
 
 <style scoped>
 .experience{
-  width: 100%;
+  @apply w-full mb-4;
 }
 .experience span{
-  display: flex;
-  width: 100%;
+  @apply flex w-full;
 }
 .green{
-  color: #00b300;
+    @apply text-green-600;
 }
 .red{
-    color: #b30000;
+    @apply text-red-600;
 }
 #gitem{
   width: 100%;

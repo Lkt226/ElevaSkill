@@ -48,31 +48,31 @@
         <DropText title="Soft Skills" main>
             <InlineSkillItem v-for="item in soft_skills" :key="item.id"
                 :title="item.name+' - '+item.test"/>
-            <br>
             <InlineSkillItem isNew/>
+            
         </DropText>
 
         <DropText title="Hard Skills" main>
             <InlineSkillItem v-for="item in hard_skills" :key="item.id"
                 :title="item.name+' - '+item.test"/>
-            <br>
             <InlineSkillItem isNew/>
+            
         </DropText>
 
         <DropText title="Experiência profissional" main>
             <InlineExpItem v-for="item in experience" :key="item.id"
                 :company="item.name" :title="item.title" :startDate="item.start_date"
                 :endDate="item.end_date" :description="item.description"/>
-            <br>
             <InlineExpItem isNew/>
+          
         </DropText>
 
         <DropText title="Formação acadêmica" main>
             <InlineExpItem v-for="item in education" :key="item.id"
                 :company="item.name" :title="item.title" :startDate="item.start_date"
                 :endDate="item.end_date" :description="item.description"/>
-            <br>
             <InlineExpItem isNew/>
+    
         </DropText>
 
       </section>
